@@ -17,9 +17,10 @@ class Script(scripts.Script):
     def ui(self, is_img2img):
         with gr.Row():
             search = gr.Textbox(label='Lexica.art Search Term:')
-        return [search]
+            generate_all = gr.Checkbox(label='Generate all 50 results', value=False)
+        return [search, generate_all]
 
-    def run(self, p, search):
+    def run(self, p, search, generate_all):
         images = []
         search_string = search.replace(" ","+")
         url = "https://lexica.art/api/v1/search?q=" + search_string
@@ -27,9 +28,15 @@ class Script(scripts.Script):
         data = resp.json() # Check the JSON Response Content documentation below
         prompts = data["images"]
         random_index = randint(0, len(prompts)-1)
-
-        p.prompt = prompts[random_index]["prompt"]
-        proc = process_images(p)
-        images += proc.images
+        if generate_all:
+            print("Generating all 50 results")
+            for i in range(0, len(prompts)-1):
+                p.prompt = prompts[i]["prompt"]
+                proc = process_images(p)
+                images += proc.images
+        else:
+            p.prompt = prompts[random_index]["prompt"]
+            proc = process_images(p)
+            images += proc.images
 
         return Processed(p, images, p.seed, proc.info)
