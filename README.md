@@ -15,4 +15,4 @@ Drop lexica2prompt.py into your scripts directory.
 Use the seed, size and cfg scale from the pulled prompts.
 Generate 1 random or all 50 prompt results
 
-![screenshot](https://github.com/Vetchems/sd-lexica2prompt/blob/main/lexica2prompt_screen.png?raw=true)
+![screenshot](https://github.com/Vetchems/sd-lexica2prompt/raw/main/lexica2prompt.png)
