@@ -10,11 +10,9 @@ Drop lexica2prompt.py into your scripts directory.
  2. Enter a search term.
  3. Click Generate.
 
-You may also generate all prompt results by selecting the 'Generate all 50 results' option.
+
+## Features
+Use the seed, size and cfg scale from the pulled prompts.
+Generate 1 random or all 50 prompt results
 
 ![screenshot](https://github.com/Vetchems/sd-lexica2prompt/blob/main/lexica2prompt_screen.png?raw=true)
-
-
-Note: This script currently only retrieves the prompt and not the parameters used for generation (eg. seed, size, cfg scale etc).
-
-Note 2: The current lexica api only provides 50 results of the most relevant images not prompt text.
