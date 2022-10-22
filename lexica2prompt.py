@@ -44,6 +44,9 @@ class Script(scripts.Script):
                     p.seed = prompts[random_index]["seed"]
                 if match_cfg:
                     p.cfg_scale = prompts[random_index]["guidance"]
+                if match_sampler:
+                    p.sampler_index = 12
+                    p.steps = 50
                 proc = process_images(p)
                 images += proc.images
         else:
@@ -55,6 +58,9 @@ class Script(scripts.Script):
                 p.seed = prompts[random_index]["seed"]
             if match_cfg:
                 p.cfg_scale = prompts[random_index]["guidance"]
+            if match_sampler:
+                p.sampler_index = 12
+                p.steps = 50
             proc = process_images(p)
             images += proc.images
 
