@@ -1,18 +1,28 @@
-# sd-lexica2prompt
-A script for Automatic1111 Stable Diffusion that pulls prompts from Lexica.art based on search terms.
+# LexiKrea
+A script for Automatic1111 Stable Diffusion that pulls prompts from Krea.ai and Lexica.art based on search terms.
 
 ## How to Install
-Drop lexica2prompt.py into your scripts directory.
+Drop lexikrea.py into your scripts directory.
 
 ## How to Use
 
  1. Select the script from the scripts drop down box.
  2. Enter a search term.
- 3. Click Generate.
+ 3. Select a site to search.
+ 4. Click Generate. (If a prompt is selected from Results it will be used otherwise this will pick a random prompt.)
+ 
+## Features 
+ 
+ Options:
+ 
+ 1. Generate all 50 results. (If selected this will generate all prompts found from the search.)
+ 2. List Prompts (Lists the search results in a dropdown box. Selecting a prompt here will use it when Generate is clicked.)
+ 3. Output to text (Saves a text file with the prompt search results in the folder specified.)
 
 
-## Features
-Use the seed, size and cfg scale from the pulled prompts.
-Generate 1 random or all 50 prompt results
+## Screenshots
 
-![screenshot](https://github.com/Vetchems/sd-lexica2prompt/raw/main/lexica2prompt.png)
+![screenshot](https://github.com/Vetchems/sd-lexikrea/raw/main/images/lexikrea_screenshot.png)
+<img src="https://github.com/Vetchems/sd-lexikrea/raw/main/images/lexikrea_screenshot_result.png" width="912"/>
+<img src="https://github.com/Vetchems/sd-lexikrea/raw/main/images/lexikrea_results_example.png" width="912"/>
+
