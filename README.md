@@ -2,7 +2,8 @@
 A script for Automatic1111 Stable Diffusion that pulls prompts from Krea.ai and Lexica.art based on search terms.
 
 ## How to Install
-Drop lexikrea.py into your scripts directory.
+Choose Install from URL from the extensions tab in WebUI.
+Use: https://github.com/Vetchems/sd-lexikrea as the url and click install.
 
 ## How to Use
 
